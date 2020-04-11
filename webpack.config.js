@@ -16,7 +16,7 @@ module.exports = {
       template: path.resolve(__dirname, 'index.html'),
       filename: 'index.html',
       inject: true,
-      minify: true,
+      minify: false,
     }),
     new MiniCssExtractPlugin({
         filename: 'style.css',
@@ -42,8 +42,8 @@ module.exports = {
       }
     ],
   },
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin({ sourceMap: false}), new OptimizeCSSAssetsPlugin({})],
-  },
+  // optimization: {
+  //   minimize: true,
+  //   minimizer: [new TerserPlugin({ sourceMap: false}), new OptimizeCSSAssetsPlugin({})],
+  // },
 };
